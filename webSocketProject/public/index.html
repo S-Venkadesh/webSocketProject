@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var msg=document.getElementById('handle').addEventListener();
+</script>
+
+<style>
+    .container{
+        background: linear-gradient(to bottom left, #33ccff 0%, #66ccff 100%);
+        margin-left: 10px;
+        margin-right: 10px; 
+    }
+    .border{
+        flex:1;
+        border-radius: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position:absolute;
+        scroll-padding-top:340px; 
+        }
+    .input1{
+        margin-top: 40px;
+        width: 570px;
+        padding:15px;
+        margin-left: 30px;
+        border-radius: 12px;
+        background-color: #b9f7fa;
+        border-width:0px;
+    
+        }
+    .input2{
+        margin-top: 10px;
+        width: 570px;
+        padding:15px;
+        margin-left: 30px;
+        
+        border-radius: 12px;
+        background-color: #b9f7fa;
+        border-width:0px;
+        }
+    .btn{
+            padding:15px;
+            width:600px;
+            border-radius: 12px;
+            margin-left: 30px;
+            background-color: #03718a;
+            border-width:0px;
+            color:ghostwhite;
+            font-weight: bold;
+            font-size: large;
+            margin-top: 10px;
+        }
+    .buttons{
+
+        flex-direction: row;
+    }
+    .bdd{
+        border-style: solid ;
+        border-color: #d0f5f1;
+        margin-top: 20px;
+        padding:30px;
+        width:550px;
+        background-color:#90e0d8 ;
+    }
+    .scroll{
+        border-style:solid;
+        border-color:  #d0f5f1;
+        border-radius: 12px;
+        margin:4px, 4px; 
+        margin-left: 30px;
+        padding:4px; 
+        background-color: #90e0d8; 
+        width: 580px; 
+        min-height: 400px; 
+        overflow-x: hidden; 
+        overflow-y: auto; 
+        text-align:justify;        
+    }
+
+</style>
+<body class="container">
+    <div id="chat">
+            <div class='scroll'>
+            <div id="output" style="flex: 1;text-align: center;color:#f03c5a;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"  ></div>
+            <div id="feedback" class="output1"></div>
+            </div>
+       
+        <div class="buttons">
+        <input id="handle" class="input1" placeholder="write your message hear"/>
+        <input id="message" onfocus="this.value=''" class="input2" placeholder="write your name hear"/>
+        <button id="send" class="btn">send</button>
+        </div>
+    </div>
+    <script src='./chat.js'></script>
+</body>
+</html>
+
