@@ -11,6 +11,7 @@ var server=app.listen(port,()=>{
 app.use(express.static('public'));
 
 var io = socket(server);
+var a=10;
 
 io.on('connection',function(socket){
     console.log("socket got connected");
